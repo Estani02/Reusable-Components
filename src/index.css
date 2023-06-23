@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+@layer components {
+
+  /* liNav: 'hover:text-white transition-colors duration-[0.25s] border-none bg-none',
+      navLink: 'relative after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-[0.25s] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left'
+ */
+  .liNav {
+    @apply hover:text-[#090F31] hover:font-bold transition-colors duration-[0.25s] border-none bg-none w-fit;
+  }
+
+  .navLink {
+    @apply relative after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:bottom-0 after:left-0 after:bg-[#090F31] after:origin-bottom-right after:transition-transform after:duration-[0.25s] after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+}
